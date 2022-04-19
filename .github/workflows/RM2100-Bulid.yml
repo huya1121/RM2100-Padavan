@@ -32,7 +32,7 @@ jobs:
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/vb1980/Padavan-KVR.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/keke1023/Padavan.git /opt/rt-n56u
         wget -P /opt/rt-n56u/trunk/user/htop/ https://github.com/hanwckf/rt-n56u/raw/master/trunk/user/htop/htop-3.0.2.tar.gz
         cd /opt/rt-n56u/toolchain-mipsel
         cd /opt/rt-n56u/toolchain-mipsel
