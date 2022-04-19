@@ -34,6 +34,11 @@ jobs:
       run: |
         git clone --depth=1 https://github.com/vb1980/Padavan-KVR.git /opt/rt-n56u
         wget -P /opt/rt-n56u/trunk/user/htop/ https://github.com/hanwckf/rt-n56u/raw/master/trunk/user/htop/htop-3.0.2.tar.gz
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/zerotier/0002-remove-pie.patch
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/Makefile
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://github.com/chongshengB/rt-n56u/blob/master/trunk/user/zerotier/ZeroTierOne-1.4.6.tar.gz
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/zerotier/zerotier.sh
+        cd /opt/rt-n56u/toolchain-mipsel
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
