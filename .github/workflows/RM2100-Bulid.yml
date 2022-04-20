@@ -32,10 +32,18 @@ jobs:
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/vb1980/Padavan-KVR.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/keke1023/Padavan.git /opt/rt-n56u
   
         rm /opt/rt-n56u/trunk/versions.inc
         wget -P /opt/rt-n56u/trunk/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/versions.inc
+        wget -P /opt/rt-n56u/trunk/user/www/n56u_ribbon_fixed/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/www/n56u_ribbon_fixed/Advanced_zerotier.asp
+        
+        rm /opt/rt-n56u/trunk/user/zerotier/*
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/0002-remove-pie.patch
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/Makefile
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/zerotier.sh
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://github.com/vb1980/Padavan-KVR/raw/main/trunk/user/zerotier/ZeroTierOne-1.4.6.tar.gz
+        
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
