@@ -40,7 +40,9 @@ jobs:
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://github.com/vb1980/Padavan-KVR/raw/main/trunk/user/zerotier/ZeroTierOne-1.4.6.tar.gz
         rm /opt/rt-n56u/trunk/user/zerotier/Makefile
         wget-P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/Makefile
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/0002-remove-pie.patch
         
+
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
