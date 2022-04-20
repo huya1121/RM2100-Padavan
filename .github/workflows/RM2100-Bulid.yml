@@ -36,7 +36,6 @@ jobs:
   
         rm /opt/rt-n56u/trunk/versions.inc
         wget -P /opt/rt-n56u/trunk/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/versions.inc
-        wget -P /opt/rt-n56u/trunk/user/www/n56u_ribbon_fixed/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/www/n56u_ribbon_fixed/Advanced_zerotier.asp
         
         rm /opt/rt-n56u/trunk/user/zerotier/*
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/0002-remove-pie.patch
