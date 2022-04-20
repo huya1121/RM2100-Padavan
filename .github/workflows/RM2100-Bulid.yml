@@ -37,6 +37,9 @@ jobs:
         rm /opt/rt-n56u/trunk/versions.inc
         wget -P /opt/rt-n56u/trunk/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/versions.inc
         
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://github.com/vb1980/Padavan-KVR/raw/main/trunk/user/zerotier/ZeroTierOne-1.4.6.tar.gz
+        sed -i '1s/1.8.4/1.4.6/' /opt/rt-n56u/trunk/user/zerotier/Makefile
+        
         
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
