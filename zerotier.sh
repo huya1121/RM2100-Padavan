@@ -39,15 +39,14 @@ start_instance() {
 	fi
 
 	add_join $(nvram get zerotier_id)
-  
-  	$PROG -d &
+	$PROG -d
+	PROGCLI join $(nvram get zerotier_id)
 	#$PROG $args $config_path >/dev/null 2>&1 &
-	PROGCLI join $(nvram get zerotier_id)	
-	
+		
 	rules
 	
 	if [ -n "$moonid" ]; then
-		$PROGCLI -D $config_path orbit $moonid $moonid
+		$PROGCLI -D$config_path orbit $moonid $moonid
 		logger -t "zerotier" "orbit moonid $moonid ok!"
 	fi
 
@@ -81,15 +80,13 @@ rules() {
 	iptables -A FORWARD -i $zt0 -j ACCEPT
 	if [ $nat_enable -eq 1 ]; then
 		iptables -t nat -A POSTROUTING -o $zt0 -j MASQUERADE
-		while [ "$(ip route | grep "dev $zt0  proto" | awk '{print $1}')" = "" ]; do
-			sleep 1
-	    done
-		ip_segment=`ip route | grep "dev $zt0  proto" | awk '{print $1}'`
+		ip_segment="$(ip route | grep "dev $zt0 proto" | awk '{print $1}')"
 		iptables -t nat -A POSTROUTING -s $ip_segment -j MASQUERADE
 		zero_route "add"
 	fi
 
 }
+
 
 del_rules() {
 	zt0=$(ifconfig | grep zt | awk '{print $1}')
@@ -128,10 +125,14 @@ start_zero() {
 
 }
 kill_z() {
-	killall -9 zerotier-one
+	zerotier_process=$(pidof zerotier-one)
+	if [ -n "$zerotier_process" ]; then
+		logger -t "ZEROTIER" "关闭进程..."
+		killall zerotier-one >/dev/null 2>&1
+		kill -9 "$zerotier_process" >/dev/null 2>&1
+	fi
 }
 stop_zero() {
-	logger -t "zerotier" "关闭zerotier"
 	del_rules
 	zero_route "del"
 	kill_z
