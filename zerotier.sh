@@ -41,9 +41,9 @@ start_instance() {
 	add_join $(nvram get zerotier_id)
   
   	$PROG -d &
-  	PROGCLI join $(nvram get zerotier_id)
 	#$PROG $args $config_path >/dev/null 2>&1 &
-		
+	PROGCLI join $(nvram get zerotier_id)	
+	
 	rules
 	
 	if [ -n "$moonid" ]; then
