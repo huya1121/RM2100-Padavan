@@ -39,8 +39,7 @@ start_instance() {
 	fi
 
 	add_join $(nvram get zerotier_id)
-	$PROG -d
-	$PROGCLI join $(nvram get zerotier_id)
+	$PROG -d && $PROGCLI join $(nvram get zerotier_id)
 		
 	rules
 	
