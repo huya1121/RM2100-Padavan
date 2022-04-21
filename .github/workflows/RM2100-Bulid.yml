@@ -42,8 +42,6 @@ jobs:
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/zerotier/Makefile
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/zerotier/0002-remove-pie.patch
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/zerotier/zerotier.sh
-        rm /opt/rt-n56u/trunk/user/www/n56u_ribbon_fixed/Advanced_zerotier.asp
-        wget -P /opt/rt-n56u/trunk/user/www/n56u_ribbon_fixed/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/www/n56u_ribbon_fixed/Advanced_zerotier.asp
         
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
