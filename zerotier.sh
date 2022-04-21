@@ -45,7 +45,7 @@ start_instance() {
 	rules
 	
 	if [ -n "$moonid" ]; then
-		$PROGCLI -D$config_path orbit $moonid $moonid
+		$PROGCLI -D $config_path orbit $moonid $moonid
 		logger -t "zerotier" "orbit moonid $moonid ok!"
 	fi
 
