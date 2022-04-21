@@ -37,12 +37,14 @@ jobs:
         rm /opt/rt-n56u/trunk/versions.inc
         wget -P /opt/rt-n56u/trunk/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/versions.inc
         
-        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://github.com/vb1980/Padavan-KVR/raw/main/trunk/user/zerotier/ZeroTierOne-1.4.6.tar.gz
-        rm /opt/rt-n56u/trunk/user/zerotier/Makefile
-        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/Makefile
-        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/0002-remove-pie.patch
+        rm /opt/rt-n56u/trunk/user/zerotier/*
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/zerotier/ZeroTierOne-1.4.6.tar.gz
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/zerotier/Makefile
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/zerotier/0002-remove-pie.patch
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/zerotier/zerotier.sh
+        rm /opt/rt-n56u/trunk/user/www/n56u_ribbon_fixed/Advanced_zerotier.asp
+        wget -P /opt/rt-n56u/trunk/user/www/n56u_ribbon_fixed/ https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/user/www/n56u_ribbon_fixed/Advanced_zerotier.asp
         
-
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
