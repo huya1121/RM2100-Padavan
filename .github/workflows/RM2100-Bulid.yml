@@ -37,6 +37,8 @@ jobs:
         rm /opt/rt-n56u/trunk/versions.inc
         wget -P /opt/rt-n56u/trunk/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/versions.inc
         
+        rm /opt/rt-n56u/trunk/user/zerotier/Makefile
+        rm /opt/rt-n56u/trunk/user/zerotier/zerotier.sh
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/ZeroTierOne-1.4.6.tar.gz
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/Makefile
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/vb1980/Padavan-KVR/main/trunk/user/zerotier/0002-remove-pie.patch
