@@ -45,7 +45,7 @@ jobs:
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/keke1023/Padavan/main/trunk/user/zerotier/0007-add-cerrno-header-for-str-errno.patch
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/keke1023/Padavan/main/trunk/user/zerotier/0008-fix-compilation-for-arm_cortex-a7-neon.patch 
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/keke1023/Padavan/main/trunk/user/zerotier/Makefile
-        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://github.com/keke1023/Padavan/blob/main/trunk/user/zerotier/ZeroTierOne-1.8.4.tar.gz
+        wget -P /opt/rt-n56u/trunk/user/zerotier/ https://github.com/keke1023/Padavan/raw/main/trunk/user/zerotier/ZeroTierOne-1.8.4.tar.gz
         wget -P /opt/rt-n56u/trunk/user/zerotier/ https://raw.githubusercontent.com/keke1023/Padavan/main/trunk/user/zerotier/zerotier.sh
       
         cd /opt/rt-n56u/toolchain-mipsel
